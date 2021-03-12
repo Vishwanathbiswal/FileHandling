@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" onblur="checkUsername()" />
+        <label id="feedback"></label>
+        <!-- <label for="password">Password</label>
+        <input type="password" id="password" /> -->
+        <!-- <input type="submit" value="Sign Up!" /> -->
+    </form>
+
+    <script>
+        function checkUsername() {
+            // target the feedback id and store in a variable
+            var username = document.getElementById('username');
+
+            // checking the conditon if user type less then of 5 char
+            if (username.value.length < 5) {
+                // set the message
+                document.getElementById("feedback").innerHTML = "Error";
+            } else
+                document.getElementById("feedback").innerHTML = "Successful";
+        }
+    </script>
+</body>
+
+</html>
